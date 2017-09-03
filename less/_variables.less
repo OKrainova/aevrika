@@ -1,0 +1,67 @@
+@grey: #e8e8e8;
+@light-grey: #f6f6f6;
+@dark-grey: #4b4b4b;
+@red: #e33321;
+@white: #ffffff;
+
+@border-grey:#5e5e5e;
+
+
+.size-without-offset(@n){
+    @value: @atom * @n;
+    width:@value;
+}
+
+.size-without-offset-lg(@n){
+    @media screen and (min-width: @break_lg){
+        @value: @atom * @n;
+        width: @value;
+    }
+}
+
+.size-without-offset-md(@n){
+    @media screen and (min-width: @break_md){
+        @value: @atom * @n;
+        width: @value;
+    }
+}
+
+.size-without-offset-sm(@n){
+    @media screen and (min-width: @break_sm){
+        @value: @atom * @n;
+        width: @value;
+    }
+}
+
+.size-without-offset-xs(@n){
+    @media screen and (min-width: @break_xs){
+        @value: @atom * @n;
+        width: @value;
+    }
+}
+
+.size-without-offset-xxs(@n){
+    @media screen and (min-width: @break_xxs){
+        @value: @atom * @n;
+        width: @value;
+    }
+}
+
+
+.crossbrows-opacity(@value){
+    @ie_value: @value * 100;
+    /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity= @{ie_value})";
+
+  /* IE 5-7 */
+  filter: alpha(opacity= @ie_value);
+
+  /* Netscape */
+  -moz-opacity: @value;
+
+  /* Safari 1.x */
+  -khtml-opacity: @value;
+
+  /* Good browsers */
+  opacity: @value;
+}

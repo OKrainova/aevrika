@@ -1,0 +1,111 @@
+.contact{
+    &-block{
+        .col-padding();
+        .size-without-offset(12);
+
+        .size-without-offset-sm(6);
+        //.size-without-offset-md(12);
+        //.size-without-offset-lg(6);
+
+        box-sizing: border-box;
+        margin-bottom: 18px;
+    }
+
+    &-info{
+        line-height: 1.75;
+
+        &__phone--link{
+            font-family: "Raleway ExtraBold", Arial, Helvetica, sans-serif;
+            color:inherit;
+        }
+
+        &__email--link{
+            color: @red;
+        }
+
+    }
+
+    &-form{
+        & .form-control{
+            width:100%; 
+
+            .xs-block({
+                width: 86%;
+            });
+
+            .sm-block({
+                width: 100%;
+            });
+
+            .md-block({
+                width:86%;
+            })
+        }
+
+        & .btn-submit{
+            background-color: @red;
+            color:@white;
+            width:100%;
+            margin-top: 25px;
+            transition: background-color 0.3s;
+
+            .xxs-block({
+                width:190px;
+            });
+
+            &:hover,
+                &:focus{
+                background-color: @dark-grey;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+.form-control{
+    border:1px solid transparent;
+    background-color: @light-grey;
+    font-family: "Roboto Regular", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    padding: 10px 28px;
+    margin-bottom: 10px;
+    height: 58px;
+    color:inherit;
+    box-sizing: border-box;
+}
+
+.btn{
+    font-family: "Raleway ExtraBold", Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    border:1px solid transparent;
+    height: 54px;
+    box-sizing: border-box;
+    padding: 20px 28px;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: center;
+    user-select: none;  
+
+    &-top{
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 20px;
+        padding: 10px;
+        .crossbrows-opacity(1);
+        transition: opacity .2s;
+        cursor: pointer;
+        z-index: 100;
+        width: 44px;
+        height: 44px;
+        background-color: @red;
+        color: @white;
+    }
+}
+
+.error{
+    border:1px solid @red;
+    color:@red;
+}

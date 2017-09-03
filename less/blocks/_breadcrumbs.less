@@ -1,0 +1,33 @@
+.navigation{
+    background-color: @light-grey;
+}
+
+/*"Хлебные крошки"*/
+.breadcrumb {
+    padding: 20px 15px;
+    font-size: 0;
+    
+    .sm-block({
+        padding-right: 50px;
+        padding-left: 50px;
+    });
+
+    &-item {
+        display: inline-block;
+        font-size: 13px;
+        padding-right:7px;
+
+        & > a {
+            color: inherit;
+
+            &:hover, &:focus, &.active {
+                color: @red;
+            }
+        }
+    }
+
+    & > li + li:before {
+        content: "/";
+        padding-right: 7px;
+    }
+}

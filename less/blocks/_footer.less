@@ -1,0 +1,133 @@
+.footer{
+    &__block{
+        .col-padding();
+        .size-without-offset(12);
+
+        .xxs-block({
+            .size-without-offset(6);
+        });
+
+        .sm-block({
+            .size-without-offset(4);
+            position:relative;
+            display:flex;
+        });
+
+        .md-block({
+            .size-without-offset(3);
+        });
+
+        box-sizing:border-box;
+        margin-bottom:20px;
+
+
+        &--title{
+            font-family: 'Raleway Extrabold', Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color:#706f6f;
+            margin-bottom: 25px;
+
+            .sm-block({
+                position: absolute;
+                -webkit-transform: rotate(-90deg) translate(-100%, -10px);
+                text-align: end;
+                transform: rotate(-90deg) translate(-100%, -10px);
+                transform-origin: left top;
+                height:42px;
+                margin-bottom:38px;
+            });
+
+
+        }
+    }
+
+    &-menu{
+        list-style: none;
+        margin: 0;
+
+        @media(max-width:779px){
+            padding-left:0;
+        }
+
+        @media(min-width:1100px){
+            padding-left: 70px;
+        }
+
+        &__item{
+            margin-bottom: 15px;
+
+            .sm-block({
+                margin-bottom: 20px;
+            });
+        }
+
+        &__link{
+            color:@white;
+            word-wrap: normal;
+            transition:color 0.3s;
+
+            & > .fa{
+                margin-right: 15px;
+                vertical-align: middle;
+                font-size: 1.5em;
+            }
+
+            &:hover,
+                &:focus{
+                color:@red;
+            }
+        }
+    }
+
+    &-bottom{
+        border-top: 1px solid @border-grey;
+        padding-top: 35px;
+        font-family: "Roboto Regular";
+        font-size: 11px;
+        text-transform: uppercase;
+
+        .clearfix();
+
+        &__block{
+
+            .xs-block({
+                float:left;
+                width:50%;
+            });
+        }
+    }
+
+}
+
+.phone-number{
+    font-family: "Roboto Regular";
+}
+
+.copyright{
+    &:before{
+        content: "\00A9";
+        margin-right: 5px;
+    }
+
+}
+
+.development{
+
+    .xs-block({
+        text-align:right;
+    });
+
+    @media(max-width:575px){
+        margin-top:20px;
+    }
+
+    &:before{
+        content: '';
+        background: url(../img/razrab.svg) no-repeat;
+        display: inline-block;
+        margin-right: 16px;
+        width: 19px;
+        height: 18px;
+        vertical-align: middle;
+    }
+}
