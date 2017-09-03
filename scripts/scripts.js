@@ -24,7 +24,9 @@ $(function () {
         self.stop(true).toggleClass('close');
 
         if (!menu.hasClass('open')) {
-            menu.addClass('open').stop(true).slideDown(500);
+            menu.stop(true).slideDown(500, function(){
+                $(this).addClass('open').removeAttr("style");
+            });
         } 
         else
         {
