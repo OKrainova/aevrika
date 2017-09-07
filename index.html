@@ -1,5 +1,5 @@
 <!DOCTYPE html> 
-<html lang="ru">
+<html lang="ru" class="no-js">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,16 +18,20 @@
                     <a href="index.html">
                         <img src="img/logo.svg" class="logo" alt="Logo"/>
                     </a>
-                </div>
+                </div>              
                 <nav class="header__block header-menu">
-                    <button class="header-menu__toggle" type="button" data-toggle="collapse" >
-                        <span class="burger"></span>
+                    <button class="nav__toggle nav__toggle--close" type="button">
+                        <span class="icon-bar"></span>
                     </button>
-
                     <ul class="header-menu__list nav">
                         <li class="header-menu__item dropdown">
                             <a href="#" class="header-menu__link">Компания</a>
+                            <button class="dm-toggle" type="button">
+                                <i class="fa fa-2x fa-angle-double-right" aria-hidden="true"></i>
+                            </button>
+
                             <ul class="dropdown-menu">
+                                <li class="dropdown-menu__item back"><i class="fa fa-2x fa-angle-double-left" aria-hidden="true"></i><span>Назад</span></li>
                                 <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">О нас</a></li>
                                 <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Наши партнеры</a></li>
                                 <li class="dropdown-menu__item"><a class="dropdown-menu__link" href="#">Наши технологии</a></li>
@@ -52,6 +56,11 @@
                 <div class="header__block header-contact">
                     <a class="header-contact__phone" href="tel:+74999410855" target="_blank">+7 (499) 941-08-55</a>
                     <a class="header-contact__phone" href="tel:+74995454511" target="_blank">+7 (499) 545-45-11</a>
+                </div>
+                <div class="header__block nav-collapse">
+                    <button class="nav__toggle" type="button">
+                        <span class="icon-bar"></span>
+                    </button>
                 </div>
             </header>
             <div class="navigation">
@@ -138,9 +147,9 @@
                                 <div class="contact-block">
                                     <h2>Или отправьте заявку и мы свяжемся с вами</h2>
                                     <form class="contact-form">
-                                        <input type="text" name="name" class="form-control" placeholder="Ваше имя" data-pattern="name"/>
-                                        <input type="text" name="phone" class="form-control" placeholder="Телефон" data-pattern="phone"/>
-                                        <input type="text" name="email" class="form-control" placeholder="Email" data-pattern="email"/>
+                                        <input type="text" name="name" class="form-control" placeholder="Ваше имя" tabindex="1" data-pattern="name"/>
+                                        <input type="text" name="phone" class="form-control" placeholder="Телефон" tabindex="1" data-pattern="phone"/>
+                                        <input type="text" name="email" class="form-control" placeholder="Email" tabindex="1" data-pattern="email"/>
                                         <input type="submit" class="btn btn-submit" value="Отправить"/>
                                     </form>
                                 </div>
@@ -207,7 +216,8 @@
             <i class="fa fa-angle-double-up fa-2x" title="Наверх"></i>
         </div>
 
-        <script src="scripts/jquery-3.2.1.min.js"></script>
+        <script src="scripts/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script src="scripts/modernizr-custom.js" type="text/javascript"></script>
         <script src="scripts/placeholders.jquery.min.js"></script>
         <script src="scripts/scripts.js"></script>
     </body>
